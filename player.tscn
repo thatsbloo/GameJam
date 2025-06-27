@@ -17,3 +17,9 @@ shape = SubResource("RectangleShape2D_2wfx3")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_enabled = true
+
+[node name="PassiveHealthDrain" type="Timer" parent="."]
+process_callback = 0
+wait_time = 0.5
+
+[connection signal="timeout" from="PassiveHealthDrain" to="." method="_on_passive_health_drain_timeout"]

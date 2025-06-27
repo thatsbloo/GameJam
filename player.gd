@@ -32,8 +32,14 @@ func _physics_process(delta: float) -> void:
 		
 		powers_toggled = not powers_toggled
 		if (powers_toggled):
-			curr_hp = curr_hp - 5
+			$PassiveHealthDrain.start()
+		else:
+			$PassiveHealthDrain.stop()
 		print(powers_toggled)
 	
 
 	move_and_slide()
+
+
+func _on_passive_health_drain_timeout() -> void:
+	curr_hp = curr_hp - 1
