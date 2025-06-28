@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c1a2rcuwsaa3h"]
+[gd_scene load_steps=14 format=3 uid="uid://c1a2rcuwsaa3h"]
 
 [ext_resource type="Texture2D" uid="uid://c08o6rqh1e22f" path="res://icon.svg" id="1_jwixr"]
 [ext_resource type="Script" path="res://player.gd" id="1_ujtti"]
@@ -18,6 +18,273 @@ size = Vector2(97, 146)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_euq28"]
 size = Vector2(57.002, 96.7631)
 
+[sub_resource type="Animation" id="Animation_x1o5w"]
+resource_name = "Attack1"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AttackHitboxes/Attack1:monitoring")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../AttackHitboxes/Attack1/Attack1Collision1:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_mm1si"]
+resource_name = "Attack2"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AttackHitboxes/Attack2:monitoring")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../AttackHitboxes/Attack2/Attack2Collision1:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_b3luw"]
+resource_name = "Attack3"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AttackHitboxes/Attack3:monitoring")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../AttackHitboxes/Attack3/Attack3Collision1:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../AttackHitboxes/Attack3/Attack3Collision2:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../AttackHitboxes/Attack3/Attack3Collision3:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../AttackHitboxes/Attack3/Attack3Collision4:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../AttackHitboxes/Attack3/Attack3Collision5:disabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_mu3x1"]
+resource_name = "Combo"
+
+[sub_resource type="Animation" id="Animation_h8iki"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AttackHitboxes/Attack1/Attack1Collision1:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../AttackHitboxes/Attack1:monitoring")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../AttackHitboxes/Attack2:monitoring")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../AttackHitboxes/Attack2/Attack2Collision1:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../AttackHitboxes/Attack3:monitoring")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../AttackHitboxes/Attack3/Attack3Collision1:disabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../AttackHitboxes/Attack3/Attack3Collision2:disabled")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../AttackHitboxes/Attack3/Attack3Collision3:disabled")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../AttackHitboxes/Attack3/Attack3Collision4:disabled")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../AttackHitboxes/Attack3/Attack3Collision5:disabled")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dfqcv"]
+_data = {
+"Attack1": SubResource("Animation_x1o5w"),
+"Attack2": SubResource("Animation_mm1si"),
+"Attack3": SubResource("Animation_b3luw"),
+"Combo": SubResource("Animation_mu3x1"),
+"RESET": SubResource("Animation_h8iki")
+}
+
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 22
 script = ExtResource("1_ujtti")
@@ -36,10 +303,9 @@ position_smoothing_enabled = true
 [node name="Attack1" type="Area2D" parent="AttackHitboxes"]
 collision_layer = 8
 collision_mask = 2
-monitoring = false
 monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackHitboxes/Attack1"]
+[node name="Attack1Collision1" type="CollisionShape2D" parent="AttackHitboxes/Attack1"]
 position = Vector2(134, 0)
 shape = SubResource("RectangleShape2D_yis0t")
 disabled = true
@@ -47,10 +313,9 @@ disabled = true
 [node name="Attack2" type="Area2D" parent="AttackHitboxes"]
 collision_layer = 8
 collision_mask = 2
-monitoring = false
 monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackHitboxes/Attack2"]
+[node name="Attack2Collision1" type="CollisionShape2D" parent="AttackHitboxes/Attack2"]
 position = Vector2(134, 0)
 shape = SubResource("RectangleShape2D_tbn4u")
 disabled = true
@@ -58,34 +323,32 @@ disabled = true
 [node name="Attack3" type="Area2D" parent="AttackHitboxes"]
 collision_layer = 8
 collision_mask = 2
-monitoring = false
 monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackHitboxes/Attack3"]
+[node name="Attack3Collision1" type="CollisionShape2D" parent="AttackHitboxes/Attack3"]
 position = Vector2(12.5, -138)
 shape = SubResource("RectangleShape2D_a6dbu")
 disabled = true
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="AttackHitboxes/Attack3"]
+[node name="Attack3Collision2" type="CollisionShape2D" parent="AttackHitboxes/Attack3"]
 position = Vector2(75, -158)
 rotation = 0.392699
 shape = SubResource("RectangleShape2D_euq28")
 disabled = true
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="AttackHitboxes/Attack3"]
+[node name="Attack3Collision3" type="CollisionShape2D" parent="AttackHitboxes/Attack3"]
 position = Vector2(114, -115)
 rotation = 0.785398
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_a6dbu")
 disabled = true
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="AttackHitboxes/Attack3"]
+[node name="Attack3Collision4" type="CollisionShape2D" parent="AttackHitboxes/Attack3"]
 position = Vector2(162, -66)
 rotation = 1.1781
 shape = SubResource("RectangleShape2D_euq28")
 disabled = true
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="AttackHitboxes/Attack3"]
+[node name="Attack3Collision5" type="CollisionShape2D" parent="AttackHitboxes/Attack3"]
 position = Vector2(138, 1)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_a6dbu")
@@ -95,5 +358,16 @@ disabled = true
 process_callback = 0
 wait_time = 0.5
 
+[node name="AttackComboTimer" type="Timer" parent="."]
+
+[node name="AttackAnimations" type="AnimationPlayer" parent="."]
+root_node = NodePath("../AttackComboTimer")
+libraries = {
+"": SubResource("AnimationLibrary_dfqcv")
+}
+
 [connection signal="body_entered" from="AttackHitboxes/Attack1" to="." method="_on_attack_1_body_entered"]
+[connection signal="body_entered" from="AttackHitboxes/Attack2" to="." method="_on_attack_2_body_entered"]
+[connection signal="body_entered" from="AttackHitboxes/Attack3" to="." method="_on_attack_3_body_entered"]
 [connection signal="timeout" from="PassiveHealthDrain" to="." method="_on_passive_health_drain_timeout"]
+[connection signal="animation_finished" from="AttackAnimations" to="." method="_on_attack_animations_animation_finished"]

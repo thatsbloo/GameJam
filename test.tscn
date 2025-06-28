@@ -28,3 +28,4 @@ scale = Vector2(2.64063, 2.97656)
 texture = ExtResource("2_qy7rt")
 
 [node name="Enemy" parent="." instance=ExtResource("4_wgd8h")]
+position = Vector2(2, -209)

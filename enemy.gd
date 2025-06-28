@@ -3,7 +3,7 @@ class_name Enemy
 
 @export var speed: float = 150.0
 @export var maxhealth: float = 20.0
-var currhealth: float = maxhealth
+@onready var currhealth: float = maxhealth
 
 var direction := -1  # -1 = left, 1 = right
 const GRAV = 2000.0
@@ -12,7 +12,7 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y += GRAV * delta
 		
-	velocity.x = direction * speed
+	#velocity.x = direction * speed
 	move_and_slide()
 
 	# Check if we hit something on the left or right
@@ -27,8 +27,9 @@ func _physics_process(delta: float) -> void:
 
 func take_damage(damage: float):
 	currhealth -= damage
+	print(currhealth)
 	var percentage = float(currhealth) / maxhealth
-	
+	print(percentage)
 	var full_width = $EnemyUI/HealthBG.size.x
 	$EnemyUI/HealthBG/Health.size.x = full_width * percentage
 	if (currhealth <= 0):
