@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://bq7l53nvanuwo"]
+
+[ext_resource type="Script" path="res://enemy.gd" id="1_grcrp"]
+
+[sub_resource type="Gradient" id="Gradient_3hj0a"]
+colors = PackedColorArray(0.6, 0, 0, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_i5h42"]
+gradient = SubResource("Gradient_3hj0a")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_am4xo"]
+size = Vector2(64, 64)
+
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_grcrp")
+
+[node name="Icon" type="Sprite2D" parent="."]
+texture = SubResource("GradientTexture2D_i5h42")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_am4xo")
+
+[node name="EnemyUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = -95.0
+offset_bottom = -95.0
+
+[node name="HealthBG" type="ColorRect" parent="EnemyUI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_right = 100.0
+offset_bottom = 40.0
+grow_horizontal = 2
+color = Color(0.466181, 0.466181, 0.466181, 1)
+
+[node name="Health" type="ColorRect" parent="EnemyUI/HealthBG"]
+layout_mode = 1
+offset_right = 200.0
+offset_bottom = 40.0
+color = Color(0, 0.549879, 0.411566, 1)
